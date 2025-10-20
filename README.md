@@ -69,3 +69,46 @@ Cada script possui **ajuda integrada**. Para exibir detalhes completos, execute:
 
 ```powershell
 Get-Help .\NomeDoScript.ps1 -Full
+
+🔹 Inclui:
+
+- Sinopse e parâmetros detalhados  
+- Exemplos reais de uso  
+- Observações de compatibilidade  
+
+---
+
+## 🧩 Padrões Seguidos
+
+✔️ Convenção de nomes `Verb-Noun`  
+✔️ Uso de `[CmdletBinding()]` e `[Parameter()]`  
+✔️ Tratamento de erros com `Try/Catch`  
+✔️ Logging centralizado  
+✔️ Comentários estruturados para gerar documentação automática  
+
+---
+
+## 💬 Contribuições
+
+Sinta-se à vontade para colaborar!  
+Abra um **Pull Request** com novos scripts, correções ou melhorias.  
+
+👉 [Ver Issues](../../issues)
+
+---
+
+## 👨‍💻 Autor
+
+**Gustavo Barbosa**  
+💼 Profissional de TI • Automação • Infraestrutura • PowerShell  
+🌐 [Portfólio](https://gl-tech-alpha.vercel.app)  
+💻 [GitHub](https://github.com/teu-usuario) | 💬 [LinkedIn](https://linkedin.com/in/teu-perfil)
+
+---
+
+<p align="center">
+  <i>“Automatizar é libertar tempo para o que realmente importa.”</i>  
+  <br>— PowerShell Automation Lab
+</p>
+
+
