@@ -1,40 +1,71 @@
-Scripts de Automação com PowerShell para Ambientes Windows
+<!-- BANNER -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/<seu-usuario>/<seu-repo>/main/assets/banner-powershell.png" alt="PowerShell Automation Banner" width="100%">
+</p>
 
-Este repositório contém uma coleção de scripts PowerShell desenvolvidos para automatizar tarefas comuns de administração de sistemas, segurança e manutenção em ambientes Windows. Cada script foi projetado para resolver um problema específico do dia a dia de uma equipa de TI e refatorado para seguir as melhores práticas, como o uso de funções avançadas, parâmetros e ajuda integrada.
+<h1 align="center">⚙️ PowerShell Automation Scripts for Windows Environments</h1>
 
-Scripts Disponíveis
+<p align="center">
+  <b>Automatize. Padronize. Domine o seu ambiente Windows.</b>
+</p>
 
-1. Gestão de Utilizadores (Active Directory)
+<p align="center">
+  <a href="https://learn.microsoft.com/en-us/powershell/"><img src="https://img.shields.io/badge/PowerShell-5.1%2B-blue?logo=powershell&logoColor=white" alt="PowerShell"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Windows-10%2F11%20%7C%20Server%202019+-0078D6?logo=windows&logoColor=white" alt="Windows"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Status-Ativo-brightgreen?style=flat-square" alt="Status"></a>
+  <a href="https://github.com/<seu-usuario>/<seu-repo>/issues"><img src="https://img.shields.io/github/issues/<seu-usuario>/<seu-repo>?color=orange&style=flat-square" alt="Issues"></a>
+  <a href="https://github.com/<seu-usuario>/<seu-repo>/commits/main"><img src="https://img.shields.io/github/last-commit/<seu-usuario>/<seu-repo>?color=yellow&style=flat-square" alt="Last Commit"></a>
+</p>
 
-Set-ADUserVacation.ps1: Automatiza o processo de "iniciar férias" de um utilizador. O script lê um ficheiro CSV, desativa a conta do utilizador no AD, move-o para uma OU específica de "Férias" e regista a sua OU original para o retorno.
+---
 
-Restore-ADUserFromVacation.ps1: Automatiza o processo de "retorno de férias". O script verifica um ficheiro de registo e, na data correta, reativa a conta do utilizador e move-o de volta para a sua Unidade Organizacional de origem.
+## 🧭 Visão Geral
 
-2. Manutenção e Inventário Remoto
+Este repositório contém uma coleção de **scripts PowerShell** desenvolvidos para automatizar tarefas comuns de **administração, segurança e manutenção** em **ambientes Windows corporativos**.  
 
-Get-RemotePCInventory.ps1: Executa um inventário remoto completo de hardware e software numa lista de computadores da rede. Gera um relatório detalhado em .txt para cada máquina, centralizando as informações num compartilhamento de rede.
+Cada script segue as **melhores práticas**:  
+✅ Funções avançadas  
+✅ Parâmetros e validações robustas  
+✅ Ajuda integrada (`Get-Help`)  
+✅ Logging padronizado  
+✅ Compatibilidade com PowerShell 5.1+ e 7.x  
 
-Invoke-RemotePCRestart.ps1: Um utilitário interativo que solicita o nome de uma máquina e envia um comando de reinicialização remota.
+---
 
-Invoke-IntelligentRestart.ps1: Reinicia remotamente uma lista de computadores de forma inteligente. Se um utilizador estiver logado, o script envia uma mensagem de aviso e agenda a reinicialização. Caso contrário, reinicia a máquina imediatamente.
+## 🧑‍💼 Gestão de Utilizadores (Active Directory)
 
-Stop-RemotePCFromFile.ps1: Desliga remotamente uma lista de computadores especificada num ficheiro de texto.
+| Script | Função |
+|--------|--------|
+| 🗂️ **Set-ADUserVacation.ps1** | Desativa contas e move utilizadores para uma OU de “Férias”. Regista a OU original para retorno. |
+| 🔄 **Restore-ADUserFromVacation.ps1** | Reativa automaticamente contas no retorno e move-as de volta à OU de origem. |
 
-3. Manutenção e Segurança de Endpoints (GPO / Local)
+---
 
-Invoke-DiskCleanup.ps1: Realiza uma limpeza profunda em discos de sistemas Windows, removendo ficheiros temporários, caches do Windows Update e outros ficheiros desnecessários para libertar espaço.
+## 🧰 Manutenção e Inventário Remoto
 
-Invoke-WindowsOptimization.ps1: Aplica um conjunto de otimizações de performance em máquinas Windows, desativando serviços de telemetria, indexação de pesquisa e outras funcionalidades que consomem recursos.
+| Script | Função |
+|--------|--------|
+| 🧾 **Get-RemotePCInventory.ps1** | Gera inventário remoto (hardware + software) e exporta relatórios centralizados. |
+| ♻️ **Invoke-RemotePCRestart.ps1** | Reinicialização remota de um único host, com confirmação. |
+| ⚡ **Invoke-IntelligentRestart.ps1** | Reinicialização inteligente em massa — detecta sessões logadas e agenda o restart. |
+| ⏻ **Stop-RemotePCFromFile.ps1** | Desliga remotamente todas as máquinas listadas num ficheiro .txt. |
 
-Invoke-ScheduledRestart.ps1: Envia uma notificação visual para o utilizador logado e força uma reinicialização após um tempo pré-determinado. Ideal para ser implementado como uma tarefa agendada.
+---
 
-Limit-UserProfileLogon.ps1: Um script de segurança para ser implementado via GPO como script de logon. Ele impede que novos utilizadores façam login numa máquina se o número de perfis de utilizador já existentes exceder um limite pré-definido.
+## 🔒 Manutenção e Segurança de Endpoints (GPO / Local)
 
-Como Usar
+| Script | Função |
+|--------|--------|
+| 🧹 **Invoke-DiskCleanup.ps1** | Limpeza profunda de temporários, cache e Windows Update. |
+| 🚀 **Invoke-WindowsOptimization.ps1** | Otimiza o Windows desativando serviços pesados e telemetria. |
+| 🔁 **Invoke-ScheduledRestart.ps1** | Exibe notificação e reinicia após tempo definido — ideal para tarefas agendadas. |
+| 👥 **Limit-UserProfileLogon.ps1** | Bloqueia logins se o limite de perfis locais for atingido (ideal via GPO). |
 
-Cada script foi transformado numa função avançada e inclui um bloco de ajuda detalhado. Para entender como usar qualquer um dos scripts, execute o seguinte comando no PowerShell:
+---
 
+## ⚙️ Como Usar
+
+Cada script possui **ajuda integrada**. Para exibir detalhes completos, execute:
+
+```powershell
 Get-Help .\NomeDoScript.ps1 -Full
-
-
-Isto irá exibir a sinopse, descrição completa e exemplos práticos de uso para cada ferramenta.
