@@ -103,7 +103,7 @@ Abra um **Pull Request** com novos scripts, correções ou melhorias.
 **Gustavo Barbosa**  
 💼 Profissional de TI • Automação • Infraestrutura • PowerShell  
 🌐 [Portfólio](https://gl-tech-alpha.vercel.app)  
-💻 [GitHub](https://github.com/XablauGtx) | 💬 [LinkedIn](www.linkedin.com/in/gustavo-barbosa-0909241b7)
+💻 [GitHub](https://github.com/XablauGtx) | 💬 [LinkedIn](https://www.linkedin.com/in/gustavo-barbosa-0909241b7)
 
 ---
 
